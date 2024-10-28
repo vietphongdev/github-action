@@ -6,4 +6,5 @@ jobs:
   hello_world_job:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "🎉 The job was automatically triggered by event."
+      - run: echo "TODAY=$(date +'%Y%m%d')" >> $GITHUB_ENV
+      - run: echo "🎉 The job was automatically triggered by event, today is $TODAY"
